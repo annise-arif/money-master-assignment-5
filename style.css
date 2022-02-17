@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.income-field{
+    background-color: rgba(136, 134, 134, 0.159);
+    border-radius: 15px;
+    
+}
+input{
+    background-color: rgba(141, 139, 139, 0.13);
+    border: none;
+    border-radius: 5px;
+}
