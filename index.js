@@ -18,7 +18,6 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
         return amount;       
     }
 
-    
     const foodAmount = getInputValue('food');
     const rentAmount = getInputValue('rent');
     const clothesAmount = getInputValue('clothes');
@@ -33,22 +32,23 @@ document.getElementById('calculate-btn').addEventListener('click', function(){
  
 });
 
- //extra saving section
+ // saving section
 
  document.getElementById('save-btn').addEventListener('click', function(){
     const incomeText = document.getElementById('income-value');
     const incomeValue = parseFloat(incomeText.value);
 
     const savingField = document.getElementById('saving-amount');
-    // const savingValue = savingField.innerText;
-
     const saveInput = document.getElementById('saving-input');
     const saveValue = parseFloat(saveInput.value);
-    
-    const savingAmount = incomeValue / saveValue;
+
+    const savingtext = incomeValue / saveValue;
+    const savingAmount = savingtext * 4;
     savingField.innerText = savingAmount;
+    //remaining Balance update
+    const remainingField = document.getElementById('remaining-balance');
+    const remainingincomeValue = incomeValue - allExpensesAmount;
+    const remaing = remainingincomeValue - savingAmount;
+    remainingField.innerText = remaing;
 
-    // const remainingField = document.getElementById('remaining-balance');
-   
-
-})
+});
